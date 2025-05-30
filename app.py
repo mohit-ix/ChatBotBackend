@@ -34,7 +34,7 @@ prompt_template = ChatPromptTemplate.from_messages(
                 - Ask for their Name, a valid email address, contact number, years of experience, desired position, current location and Tech stack turn by turn.
                 - Ocassionaly ask for upto 3 relevant information at once.
                 - Don't get distracted from the conversation.
-                - After collecting the information, Ask the user at least three questions for each skill mentioned in Tech Stack one by one to test their knowledge.
+                - After collecting the information, Ask the user  three questions for each skill mentioned in Tech Stack one by one to test their knowledge.
                 - If the user gets nervous then console them.
             After asking the questions. I want you to end the conversation with a "Goodbye".
             ''',
