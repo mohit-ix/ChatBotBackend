@@ -98,7 +98,7 @@ def getResponse():
     return msgToSend
 
 # Endpoint for Initialization for the conversation
-@app.route("/", methods=['POST'])
+@app.route("/")
 def index():
     '''
         This function receives "Start" from frontend and generate the Welcome message for User.
@@ -109,19 +109,20 @@ def index():
             "text": "Generated message"
         }
     '''
-    message = request.get_json()
+    # message = request.get_json()
 
-    input_messages = [HumanMessage(message['message']['text'])]
-    output = conversationModel.invoke({"messages": input_messages}, config)
-    # print(output["messages"][-1].content)
-    # output["messages"][-1].pretty_print()
+    # input_messages = [HumanMessage(message['message']['text'])]
+    # output = conversationModel.invoke({"messages": input_messages}, config)
+    # # print(output["messages"][-1].content)
+    # # output["messages"][-1].pretty_print()
 
-    msgToSend = {
-        "id": random.randrange(0, 10000),
-        "sender": "bot",
-        "text": output["messages"][-1].content
-    }
+    # msgToSend = {
+    #     "id": random.randrange(0, 10000),
+    #     "sender": "bot",
+    #     "text": output["messages"][-1].content
+    # }
 
-    msgToSend = json.dumps(msgToSend)
+    # msgToSend = json.dumps(msgToSend)
 
-    return msgToSend
+    # return msgToSend
+    return "hello, world"
