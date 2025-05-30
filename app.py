@@ -125,6 +125,3 @@ def index():
     msgToSend = json.dumps(msgToSend)
 
     return msgToSend
-
-if __name__ == "__main__":
-    app.run()
